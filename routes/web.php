@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+# contact
+Route::get('/contact/show', [App\Http\Controllers\ContactsController::class, 'show'])->name('contact.show');
+Route::get('/contact/create', [App\Http\Controllers\ContactsController::class, 'create'])->name('contact.create');
+Route::post('/contact/save', [App\Http\Controllers\ContactsController::class, 'save'])->name('contact.save');
